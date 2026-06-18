@@ -10,7 +10,8 @@ pool
   .catch((err) => console.error('⚠️  Database connection failed:', err.message));
 
 const server = app.listen(env.PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${env.PORT} (${env.NODE_ENV})`);
+  const url = env.SERVER_URL || `http://localhost:${env.PORT}`;
+  console.log(`🚀 Server running on ${url} (${env.NODE_ENV})`);
 });
 
 async function shutdown(signal: string) {
