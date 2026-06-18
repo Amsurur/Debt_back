@@ -23,4 +23,5 @@ export const env = {
   REFRESH_TOKEN_TTL: process.env.REFRESH_TOKEN_TTL ?? '7d',
 
   CORS_ORIGIN: process.env.CORS_ORIGIN ?? '*',
+  SERVER_URL: process.env.SERVER_URL ?? '',
 };

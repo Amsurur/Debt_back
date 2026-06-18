@@ -13,9 +13,12 @@ export const openapiSpec = {
       'Backend API for tracking debts between you and your contacts (Node.js + TypeScript + PostgreSQL).',
     license: { name: 'MIT' },
   },
-  servers: [
-    { url: `http://localhost:${env.PORT}`, description: 'Local development' },
-  ],
+  servers: env.SERVER_URL
+    ? [
+        { url: env.SERVER_URL, description: 'Production' },
+        { url: `http://localhost:${env.PORT}`, description: 'Local development' },
+      ]
+    : [{ url: `http://localhost:${env.PORT}`, description: 'Local development' }],
   tags: [
     { name: 'Auth', description: 'Registration, login, token refresh & logout' },
     { name: 'Users', description: 'Current user profile' },
