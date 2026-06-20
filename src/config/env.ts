@@ -19,7 +19,7 @@ export const env = {
 
   ACCESS_TOKEN_SECRET: required('ACCESS_TOKEN_SECRET'),
   REFRESH_TOKEN_SECRET: required('REFRESH_TOKEN_SECRET'),
-  ACCESS_TOKEN_TTL: process.env.ACCESS_TOKEN_TTL ?? '15m',
+  ACCESS_TOKEN_TTL: process.env.ACCESS_TOKEN_TTL ?? '2h',
   REFRESH_TOKEN_TTL: process.env.REFRESH_TOKEN_TTL ?? '7d',
 
   CORS_ORIGIN: process.env.CORS_ORIGIN ?? '*',
